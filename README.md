@@ -24,3 +24,5 @@ avrdude -p atmega32u4 -P /dev/ttyACM0  -c avr109  -U flash:w:wombat_lufa.hex
 
 
 ![Pinout](/images/pinout.png)
+
+![Wiring](/images/wiring.png)
