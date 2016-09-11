@@ -72,7 +72,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  F1,  F2,  F3,  F4,TRNS,TRNS, \
     ESC, TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  F5,  F6,  F7,  F8,     TRNS, \
     TRNS,   1,   2,   3,   4,   5,   6,  F9, F10, F11, F12,     TRNS, \
-    LCTL,TRNS,TRNS,        TRNS,SPC,                 TRNS,FN31,TRNS),
+    LCTL,TRNS,TRNS,      SPC,BSPC,                   TRNS,FN31,TRNS),
 
   // 5: Config Layer
   KEYMAP(
