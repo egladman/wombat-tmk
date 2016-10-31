@@ -44,7 +44,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TAB,    Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,LBRC,FN10, \
     LGUI,   A,   S,   D,   F,   G,   H,   J,   K,   L,SCLN,      ENT, \
     LSFT,   Z,   X,   C,   V,   B,   N,   M,COMM, DOT,SLSH,      FN0, \
-    FN11, FN1,LALT,        BSPC,FN8,                   RALT,FN9,FN2),
+    FN11, FN1,LALT,        BSPC,FN8,                   RALT,FN9,FN14),
 
   // 1: Colemak
   KEYMAP(
@@ -70,15 +70,22 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // 4: Lock Layer
   KEYMAP(
     TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  F1,  F2,  F3,  F4,TRNS,TRNS, \
-    ESC, TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  F5,  F6,  F7,  F8,     TRNS, \
-    TRNS,   1,   2,   3,   4,   5,   6,  F9, F10, F11, F12,     TRNS, \
-    LCTL,TRNS,TRNS,      SPC,BSPC,                   TRNS,FN31,TRNS),
+    ESC, TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  F5,  F6,  F7,  F8,     BSPC, \
+    TRNS,   1,   2,   3,   4,   5,   6,  F9, F10, F11, F12,     FN31, \
+    LCTL,TRNS,TRNS,      SPC, ENT,                   TRNS,TRNS,TRNS),
 
   // 5: Config Layer
   KEYMAP(
     FN12, FN4, FN5,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
     TRNS,ACL0,ACL1,ACL2,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
     TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
+    TRNS,TRNS,TRNS,        TRNS,TRNS,                TRNS,TRNS,TRNS),
+
+  // 6: Music Layer
+  KEYMAP(
+    TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MPRV,MNXT,  UP,TRNS,TRNS,TRNS, \
+    TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,RGHT,     TRNS, \
+    TRNS,VOLD,VOLU,MUTE,TRNS,TRNS,TRNS,TRNS,TRNS,DOWN,TRNS,     TRNS, \
     TRNS,TRNS,TRNS,        TRNS,TRNS,                TRNS,TRNS,TRNS),
 };
 
@@ -103,13 +110,14 @@ const uint16_t PROGMEM fn_actions[] = {
   [0] = ACTION_LAYER_MOMENTARY(2),      // to Fn 1
   [1] = ACTION_LAYER_MOMENTARY(3),      // to Fn 2
 
-  // [2] = ACTION_LAYER_TOGGLE(4),         // to Lock layer
-  [2] = ACTION_LAYER_TAP_TOGGLE(4),
+  [2] = ACTION_LAYER_TAP_TOGGLE(4),     // to Lock layer
 
   [3] = ACTION_LAYER_MOMENTARY(5),      // to Config Layer
 
   [4] = ACTION_DEFAULT_LAYER_SET(0),    // set qwerty layout
   [5] = ACTION_DEFAULT_LAYER_SET(1),    // set colemak layout
+
+
 
   [8] = ACTION_LAYER_TAP_KEY(2, KC_SPC),
   [9] = ACTION_MODS_TAP_KEY(MOD_RSFT, KC_GRV),
@@ -131,6 +139,12 @@ const uint16_t PROGMEM fn_actions[] = {
   [26] = ACTION_MACRO(PLUS),
   [27] = ACTION_MACRO(PIPE),
   [28] = ACTION_MACRO(QUOT),
+
+  [14] = ACTION_BACKLIGHT_TOGGLE(), // turn backlight on/off
+  [29] = ACTION_BACKLIGHT_DECREASE(), //decrease backlight
+  [30] = ACTION_BACKLIGHT_INCREASE(), // increase backlight
+
+  [31] = ACTION_LAYER_MOMENTARY(6),      // to Fn 1
 };
 
 

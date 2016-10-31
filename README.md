@@ -1,6 +1,6 @@
-# TMK Firmware for The Wombat
+# [TMK Firmware for The Wombat](https://github.com/egladman/wombat-tmk)
 
-This is intended to be ran on a pro micro (ATmega32U4)
+This is intended to be ran on a Pro Micro (ATmega32U4).
 
 ### Clone
 ```
@@ -27,4 +27,4 @@ avrdude -p atmega32u4 -P /dev/ttyACM0  -c avr109  -U flash:w:wombat_lufa.hex
 
 ![Wiring](/images/wiring.png)
 
-The keyboard is depicted *upside*.
+The keyboard is depicted *upside down*.
