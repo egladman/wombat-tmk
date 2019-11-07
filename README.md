@@ -9,6 +9,14 @@ cd wombat-tmk
 git submodule update --init --recursive
 ```
 
+### Install Dependencies
+
+#### Fedora
+
+```
+dnf install dfu-programmer avr-gcc
+```
+
 ### Compile
 ```bash
 make
