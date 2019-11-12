@@ -25,6 +25,15 @@ make KEYMAP=plain
 ```
 
 ### Flash
+
+#### Board
+
+Quickly double tap the `RESET` switch on the pcb (i.e. short the `RST` to `GND` twice) to enter the bootloader
+
+*You'll have 8 seconds to flash firmware to the board*
+
+#### Console
+
 *you might need to run the following command as super user*
 ```
 avrdude -p atmega32u4 -P /dev/ttyACM0  -c avr109  -U flash:w:wombat_lufa.hex
