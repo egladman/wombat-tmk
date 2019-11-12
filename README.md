@@ -14,7 +14,7 @@ git submodule update --init --recursive
 #### Fedora
 
 ```
-dnf install dfu-programmer avr-gcc avr-libc
+dnf install dfu-programmer avr-gcc avr-libc avrdude
 ```
 
 ### Compile
